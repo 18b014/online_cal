@@ -1,4 +1,3 @@
-
 /*
 TODO:
     Limit number input
@@ -96,7 +95,7 @@ TODO:
       } else { // If result is infinity, set off by dividing by zero
         resultNum = "HEY YOU! Don't do like that again";
         el('#calculator').classList.add("broken"); // Break calculator
-        el('#reset').classList.add("show"); // And show reset button
+        // el('#reset').classList.add("show"); // And show reset button
       }
     }
 
@@ -132,7 +131,8 @@ TODO:
     viewer.innerHTML = "0";
     equals.setAttribute("data-result", resultNum);
   };
-
+  
+  
   /* The click events */
 
   // Add click event to numbers
@@ -148,9 +148,11 @@ TODO:
   el("#clear_it").onclick = clearIt;
   el("#clear_all").onclick = clearAll;
 
-  // Add click event to reset button
-  el("#reset").onclick = function() {
-    window.location = window.location;
-  };
+  // Add click event to Pi button
+  el("#pi").onclick = function() {
+    window.onload = function() {
+      location.href = "https://www.online-calculator.com/scientific-calculator/";
+    }
+  } 
 
 }());
